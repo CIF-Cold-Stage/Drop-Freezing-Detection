@@ -1,0 +1,63 @@
+NC State Cold-Stage: Ice Nucleation Binned Data File
+Contact Markus Petters (markus_petters@ncsu.edu)
+North Carolina State University, Raleigh, North Carolina, USA
+------------------------------------------------------------
+Tl (C)            lower bin edge temperature
+Tmid (C)          temperature mid point
+Tu (C)            upper bin edge
+Cin (# L-1)       mean INP concentration per L of H2O
+sigma Cin (# L-1) 1 sigma INP concentration per L of H2O
+n (-)             number of freeze events
+------------------------------------------------------------
+Sample description           Dust suspension
+Data collected               mm-dd-yyyy (hh:mm - hh:mm)
+Number of repeats            2
+Date analyzed                mm-dd-yyyy
+Date analyzed                mm-dd-yyyy
+Date validated               mm-dd-yyyy
+Date validated               mm-dd-yyyy
+Drop volume (L)              1.00e-06
+Stage cooling rate (K min-1) 2
+Data originator              Shweta Yadav
+------------------------------------------------------------
+   Tl    Tmid   Tu       Cin        sigma      n
+ -40.5,  -40.0,  -39.5,        NaN,        NaN,   NaN
+ -39.5,  -39.0,  -38.5,        NaN,        NaN,   NaN
+ -38.5,  -38.0,  -37.5,        NaN,        NaN,   NaN
+ -37.5,  -37.0,  -36.5,        NaN,        NaN,   NaN
+ -36.5,  -36.0,  -35.5,        NaN,        NaN,   NaN
+ -35.5,  -35.0,  -34.5,        NaN,        NaN,   NaN
+ -34.5,  -34.0,  -33.5,        NaN,        NaN,   NaN
+ -33.5,  -33.0,  -32.5,        NaN,        NaN,   NaN
+ -32.5,  -32.0,  -31.5,        NaN,        NaN,   NaN
+ -31.5,  -31.0,  -30.5,        NaN,        NaN,   NaN
+ -30.5,  -30.0,  -29.5,        NaN,        NaN,   NaN
+ -29.5,  -29.0,  -28.5,        NaN,        NaN,   NaN
+ -28.5,  -28.0,  -27.5,        NaN,        NaN,   NaN
+ -27.5,  -27.0,  -26.5,        NaN,        NaN,   NaN
+ -26.5,  -26.0,  -25.5,        NaN,        NaN,   NaN
+ -25.5,  -25.0,  -24.5,        NaN,        NaN,   NaN
+ -24.5,  -24.0,  -23.5,   2.11e+06,   8.64e+05,   128
+ -23.5,  -23.0,  -22.5,   7.17e+05,   2.29e+05,   143
+ -22.5,  -22.0,  -21.5,   2.70e+05,   7.60e+04,    79
+ -21.5,  -21.0,  -20.5,   1.18e+05,   1.92e+04,    24
+ -20.5,  -20.0,  -19.5,   6.85e+04,   1.14e+04,    14
+ -19.5,  -19.0,  -18.5,   4.27e+04,   6.31e+03,     7
+ -18.5,  -18.0,  -17.5,   2.39e+04,   6.30e+03,     8
+ -17.5,  -17.0,  -16.5,   9.54e+03,   3.99e+03,     4
+ -16.5,  -16.0,  -15.5,        NaN,        NaN,   NaN
+ -15.5,  -15.0,  -14.5,        NaN,        NaN,   NaN
+ -14.5,  -14.0,  -13.5,        NaN,        NaN,   NaN
+ -13.5,  -13.0,  -12.5,        NaN,        NaN,   NaN
+ -12.5,  -12.0,  -11.5,        NaN,        NaN,   NaN
+ -11.5,  -11.0,  -10.5,        NaN,        NaN,   NaN
+ -10.5,  -10.0,   -9.5,        NaN,        NaN,   NaN
+  -9.5,   -9.0,   -8.5,        NaN,        NaN,   NaN
+  -8.5,   -8.0,   -7.5,        NaN,        NaN,   NaN
+  -7.5,   -7.0,   -6.5,        NaN,        NaN,   NaN
+  -6.5,   -6.0,   -5.5,        NaN,        NaN,   NaN
+  -5.5,   -5.0,   -4.5,        NaN,        NaN,   NaN
+  -4.5,   -4.0,   -3.5,        NaN,        NaN,   NaN
+  -3.5,   -3.0,   -2.5,        NaN,        NaN,   NaN
+  -2.5,   -2.0,   -1.5,        NaN,        NaN,   NaN
+  -1.5,   -1.0,   -0.5,        NaN,        NaN,   NaN
