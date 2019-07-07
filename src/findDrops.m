@@ -34,7 +34,7 @@ end
 
 % Get unfrozen image and crop image for faster search
 fprintf('Create image crop boundaries, by clicking in the upper left and\n');
-fprintf('lower right of the image.\n\n');
+fprintf('   lower right of the image.\n\n');
 im1 = imread(hUnfrozenIm);
 f1 = figure;
 imshow(im1);

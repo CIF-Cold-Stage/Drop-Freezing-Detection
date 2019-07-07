@@ -1,4 +1,6 @@
 function [return_im,bounds] = get_tile(im1,horz_coord,vert_coord,tile_size,varargin)
+% Returns a subset of an image centered on the x/y coordinates and includes
+% a square bounded by -tile_size/2 to tile_size/2.
 
 if size(varargin,2) > 0
     if ischar(varargin{1})

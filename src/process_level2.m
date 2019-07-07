@@ -1,4 +1,5 @@
 function [] = process_level2(bp, meta)
+% Convert the processed data into a report and figure for analysis
 
 isOctave = exist('OCTAVE_VERSION', 'builtin') ~= 0;
 if isOctave
@@ -47,7 +48,7 @@ for k = 1:numel(experiment)    % collate all experiments
 end
 
 % compute mean and standard dev in each bin
-for i = 1:numel(conc_list);
+for i = 1:numel(conc_list)
     if n(i) >= 3  % ignore bins with fewer than 3 freeze events
         conc(i) = mean(conc_list{i}.Cin);
         sdev(i) = std(conc_list{i}.Cin);

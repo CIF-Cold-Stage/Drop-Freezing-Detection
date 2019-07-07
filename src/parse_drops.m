@@ -1,4 +1,7 @@
 function [drop] = parse_drops(drop, sensitivityAdjust)
+% Takes a structure array (drop) as an input and loops through all drops
+% looking for freeze events
+
 
 % These two structure elements are used during image processing
 se3 = strel('disk',3, 0);

@@ -1,4 +1,5 @@
 function write_txt(file, bounds, mid, conc, sdev, n, meta)
+% Output the final data to a txt file 
 
 fptr = fopen(file,'w');
 fprintf(fptr, 'NC State Cold-Stage: Ice Nucleation Binned Data File\n');

@@ -13,7 +13,21 @@
 %     process_level2 produces a .png file and .txt file with the binned 
 %     data in the appropriate level 3/... directory
 %-
-      
+
+% Check to see if the cicle_hough functions are in the current work path
+pathCell = regexp(path, pathsep, 'split');
+circle_hough_path = 'circle_hough';
+if ispc  % Windows is not case-sensitive
+  onPath = any(strcmpi([pwd,filesep,circle_hough_path], pathCell));
+else
+  onPath = any(strcmp([pwd,filesep,circle_hough_path], pathCell));
+end
+
+% Add path if not already there
+if ~onPath
+    addpath(circle_hough_path);
+end
+
 % First example block for meta data. Fill in as known
 meta(1).pre = 'Experiment 1';                         % Sample prefix
 meta(1).files = {'Experiment 1a'; 'Experiment 1b'};   % Experiment repeats
@@ -46,8 +60,30 @@ process_level1(['level 1/' file '/'], ['level 2/' file '/'], ...
 %  This could be setup as a loop. It will be useful to do it in a loop 
 %  when somthing is changed in the binning. It will be retroactively 
 %  applied to all experiments. For standard analysis you can simply change 
-%  the index to select the appropriate meta block.
+%  the index to select the appropriate meta block. The result will produce
+%  two files, a text file containing the resulting IN spectra and a png
+%  plot of the result in fraction frozen and IN concentration per picoliter
+%  of sample water space. If the experiment contains repeats, the results
+%  will be combined together to produce a single data set for reporting.
 
-% bp = 'level 2/';                       % Path to validated level 1 data
-% m = meta(1);                           % Selected Experiment meta block
-% process_level2(bp, m)                  % Collate the data
+bp = 'level 2/';                       % Path to validated level 1 data
+allExperimentsProcessed = 0;
+for i = 1:length(m.files{1})
+    if ~exist('level 2/Experiment 1b/verifiedDrops.mat','file')
+        allExperimentsProcessed = 0;
+        break;
+    else
+        allExperimentsProcessed = 1;
+    end
+end
+
+if allExperimentsProcessed
+    process_level2(bp, m)                  % Collate the data
+else
+    fprintf('Still have experiments in this series to process before report is generated\n');
+end
+    
+
+
+
+

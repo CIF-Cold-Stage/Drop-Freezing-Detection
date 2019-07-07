@@ -1,4 +1,6 @@
 function [fig, ax] = figurehandle(width, height, fig)
+% Formats figure window for output
+
 fig = figure(fig);
 clf();
 set(0,'DefaultAxesFontSize', 10)

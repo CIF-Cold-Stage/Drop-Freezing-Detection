@@ -60,7 +60,7 @@ for i = 1:length(varargin)
             tileSize = varargin{i+1};
             i = i+1;
         case 'identifyDropsManually'
-            identifyDropsManually = varargin{i+1} 
+            identifyDropsManually = varargin{i+1};
     end
 end
 
@@ -80,7 +80,7 @@ end
 % The main processing steps
 [image_files,TLog] = load_log(bp);  % load the files
 if identifyDropsManually == true
-    [drop, x_store, y_store] = generate_drops(bp, image_files, TLog);
+    [drop, ~, ~] = generate_drops(bp, image_files, TLog);
 else
     d = dir([bp,'*.jpg']);
     hUnfrozenIm = [bp,d(1).name];
