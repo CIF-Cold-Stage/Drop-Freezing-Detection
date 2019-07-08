@@ -51,7 +51,13 @@ meta(1).out = 'level 3/';                             % Output of processed data
 % 'identifyDropsManually', false => use manually identifies drops
 % 'sensitivityAdjust', xx => value to set the contrast for freeze detection
 
-m = meta(1); file = m.files{2};
+% GUI controls for automatic are given via text prompts. Use left mouse 
+% button to select, right mouse button to dismiss. For manual selection use
+% left mouse button to place circle, right mouse button to indicate
+% completion of the task. For validation, use left mouse 
+% button to "approve" correct image, right mouse button to "skip".
+
+m = meta(1); file = m.files{1};
 process_level1(['level 1/' file '/'], ['level 2/' file '/'], ...
     'identifyDropsManually', false, 'sensitivityAdjust', 0.9);
 
@@ -66,23 +72,12 @@ process_level1(['level 1/' file '/'], ['level 2/' file '/'], ...
 %  of sample water space. If the experiment contains repeats, the results
 %  will be combined together to produce a single data set for reporting.
 
-bp = 'level 2/';                       % Path to validated level 1 data
-allExperimentsProcessed = 0;
-for i = 1:length(m.files{1})
-    if ~exist('level 2/Experiment 1b/verifiedDrops.mat','file')
-        allExperimentsProcessed = 0;
-        break;
-    else
-        allExperimentsProcessed = 1;
-    end
-end
+% Uncomment these lines for level 2 processing. Comment out the
+% process_level 1 line above.
 
-if allExperimentsProcessed
-    process_level2(bp, m)                  % Collate the data
-else
-    fprintf('Still have experiments in this series to process before report is generated\n');
-end
-    
+% bp = 'level 2/';                       % Path to validated level 1 data
+% m = meta(1);                           % Selected Experiment meta block
+% process_level2(bp, m)                  % Collate the data
 
 
 
