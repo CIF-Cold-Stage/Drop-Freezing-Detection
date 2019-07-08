@@ -1,5 +1,9 @@
 # Drop-Freezing-Detection
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3271562.svg)](https://doi.org/10.5281/zenodo.3271562)
+
 MATLAB code to analyze drop freezing spectra from ice nucleation cold-stage measurements. The code was tested using MATLAB 2018b.
+
+Timothy Wright, & Markus Petters. (2019, July 8). mdpetters/Drop-Freezing-Detection: v1 (Version v1). Zenodo. http://doi.org/10.5281/zenodo.3271562
 
 # Background
 This code is used to analyze observed freeze events of droplets placed on the NC State cold-stage instrument. The instrument was first introduced in Wright and Petters (2013). Early experiments with the instruments used ~100 um diameter droplets immersed in oil and a computer algorithm was needed to identify freeze events. Data from oil immersion experiments are published in a number of manuscripts (Wright and Petters, 2013; Wright et al., 2013, Wright et al., 2014, Hader et al., 2014, Hiranuma et al., 2015, Petters and Wright, 2015, DeMott et al., 2017). Starting with Hader et al. (2014) our group included larger drops (~700 um) also immersed in oil. Subsequently, we replaced the oil with a hydrophobic glass slide and used 1 ul volume drops. Experiments with these larger drop experiments are reported in DeMott et al. (2017, 2018) and Hiranuma et al. (2019) and manuscripts in preparation.
